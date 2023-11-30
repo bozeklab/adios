@@ -2,7 +2,7 @@ python main_pretrain.py \
     --alpha_entropy 0 \
     --alpha_sparsity 0.75 \
     --batch_size 128 \
-    --dataset imagenet100 \
+    --dataset he \
     --temperature 0.2 \
     --lr 0.18955780763100336 \
     --mask_lr 0.4987622134866454 \

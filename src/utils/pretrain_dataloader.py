@@ -478,6 +478,10 @@ def prepare_transform(dataset: str, multicrop: bool = False, **kwargs) -> Any:
         return (
             ImagenetTransform(**kwargs) if not multicrop else MulticropImagenetTransform(**kwargs)
         )
+    elif dataset in ["he"]:
+        return (
+            ImagenetTransform(**kwargs) if not multicrop else MulticropImagenetTransform(**kwargs)
+        )
     elif dataset == "clevr":
         return ClevrTransform(**kwargs)
 
@@ -590,7 +594,8 @@ def prepare_datasets(
     elif dataset in ["imagenet", "imagenet100", "imagenet100s"]:
         train_dir = os.path.join(data_dir, train_dir)
         train_dataset = dataset_with_index(ImageFolder)(train_dir, transform)
-
+    elif dataset in ["he"]:
+        train_dataset = dataset_with_index(ImageFolder)(data_dir, transform)
     elif dataset == "clevr":
         train_dataset = dataset_with_index(ClevrDataset)\
             (data_dir, transform, 'train', morphology, load_masks)
