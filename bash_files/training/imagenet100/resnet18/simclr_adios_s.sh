@@ -22,7 +22,7 @@ python main_pretrain.py \
     --proj_hidden_dim 2048 \
     --unet_norm gn \
     --gpus 4 \
-    --data_dir /data/pwojcik/images_he_seg/ \
+    --data_dir /data/pwojcik/images_he_seg1000/ \
     --wandb_dir /data/pwojcik/adios_wandb \
     --checkpoint_dir /data/pwojcik/adios/checkpoints \
     --project adios \
