@@ -94,6 +94,7 @@ def prepare_transforms(dataset: str, size: int) -> Tuple[nn.Module, nn.Module]:
         "stl10": stl_pipeline,
         "imagenet100s": imagenet_pipeline,
         "imagenet100": imagenet_pipeline,
+        "he": imagenet_pipeline,
         "imagenet": imagenet_pipeline,
         "clevr": clevr_pipeline,
     }
