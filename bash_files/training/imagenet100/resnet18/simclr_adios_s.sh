@@ -23,7 +23,7 @@ python main_pretrain.py \
     --output_dim 128 \
     --proj_hidden_dim 2048 \
     --unet_norm gn \
-    --gpus '0, 1, 2, 3' \
+    --gpus '0' \
     --validation_frequency 0 \
     --data_dir /data/pwojcik/images_he_seg1000/ \
     --wandb_dir /data/pwojcik/adios_wandb \

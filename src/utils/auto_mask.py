@@ -77,7 +77,6 @@ class AutoMASK(Callback):
 
         # create logging dirs
         if trainer.is_global_zero:
-            print('!!!!!!!!')
             os.makedirs(self.path, exist_ok=True)
 
     def on_train_start(self, trainer: pl.Trainer, _):
@@ -112,8 +111,6 @@ class AutoMASK(Callback):
                     for mask in torch.chunk(hard_masks, self.args.N, dim=1):
                         save_tensor.extend([mask.repeat(1,3,1,1), x.cpu() * (1 - mask)])
                     path = os.path.join(self.path, self.umap_placeholder.format(trainer.current_epoch, n))
-                    print('!!!')
-                    print(path)
                     save_image(torch.cat(save_tensor), path)
             module.train()
 
