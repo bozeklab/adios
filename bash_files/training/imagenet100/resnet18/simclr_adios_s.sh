@@ -22,11 +22,11 @@ python main_pretrain.py \
     --proj_hidden_dim 2048 \
     --unet_norm gn \
     --gpus 0 \
-    --data_dir /datasets/yshi \
-    --wandb_dir /datasets/yshi/adios \
-    --checkpoint_dir /datasets/yshi/adios/trained_models \
+    --data_dir /data/pwojcik/images_he_seg/ \
+    --wandb_dir /data/pwojcik/adios_wandb \
+    --checkpoint_dir /data/pwojcik/adios/checkpoints \
     --project adios \
-    --entity yugeten \
+    --entity pwojcik \
     --name simclr_adios_s_resnet18_imagenet100 \
     --wandb True
 # note: replace --data_dir, --wandb_dir, --checkpoint_dir, --project, --entity, --name with your custom values.
