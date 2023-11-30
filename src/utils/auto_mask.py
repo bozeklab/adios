@@ -114,7 +114,7 @@ class AutoMASK(Callback):
                     save_image(torch.cat(save_tensor), path)
             module.train()
 
-    def on_training_end(self, trainer: pl.Trainer, module: pl.LightningModule):
+    def on_train_epoch_end(self, trainer: pl.Trainer, module: pl.LightningModule):
         """Tries to generate an up-to-date UMAP visualization of the features
         at the end of each validation epoch.
 
