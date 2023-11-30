@@ -185,6 +185,7 @@ def main():
         checkpoint_callback=False,
         terminate_on_nan=True,
         accelerator="ddp",
+        limit_val_batches=0,
         check_val_every_n_epoch=args.validation_frequency,
     )
 
