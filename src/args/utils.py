@@ -3,6 +3,7 @@ from argparse import Namespace
 N_CLASSES_PER_DATASET = {
     "cifar10": 10,
     "cifar100": 100,
+    "he": 1,
     "stl10": 10,
     "imagenet": 1000,
     "imagenet100": 100,
@@ -15,6 +16,7 @@ IMG_SIZE_DATASET = {
     "cifar100": 32,
     "stl10": 96,
     "imagenet": 224,
+    "he": 224,
     "imagenet100": 224,
     "imagenet100s": 96,
     "clevr": 64,
@@ -28,6 +30,7 @@ TARGET_DATASET = {
     "imagenet": "single",
     "imagenet100": "single",
     "imagenet100s": "single",
+    "he": "multi",
     "clevr": "multi",
 }
 
