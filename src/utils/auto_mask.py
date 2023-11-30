@@ -101,7 +101,7 @@ class AutoMASK(Callback):
             # set module to eval model and collect all feature representations
             module.eval()
             with torch.no_grad():
-                for n, (x, _) in enumerate(trainer.train_dataloaders[0]):
+                for n, (x, _) in enumerate(trainer.val_dataloaders[0]):
                     x = x.to(device, non_blocking=True)[:8]
                     feats = module.mask_encoder(x)
                     soft_masks = module.mask_head(feats)

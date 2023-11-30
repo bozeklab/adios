@@ -192,7 +192,7 @@ def main():
     if args.dali:
         trainer.fit(model, val_dataloaders=val_loader)
     else:
-        trainer.fit(model, train_loader, val_loader)
+        trainer.fit(model, train_loader, val_dataloaders=val_loader)
 
 
 if __name__ == "__main__":
