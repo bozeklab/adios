@@ -17,6 +17,7 @@ python main_pretrain.py \
     --N 4 \
     --encoder resnet18 \
     --mask_fbase 8 \
+    --auto_mask \
     --method simclr_adios_s \
     --output_dim 128 \
     --proj_hidden_dim 2048 \
