@@ -164,8 +164,8 @@ class SimCLR_ADIOS_S(BaseADIOSModel):
         self.flip_inpainter_grad(status=True)
         opt_i.zero_grad()
         sim = self.inpaint_forward(batch)
-        linear_loss = self.linear_forward(batch, batch_idx)
-        i_loss = linear_loss + sim
+        #linear_loss = self.linear_forward(batch, batch_idx)
+        i_loss = sim #linear_loss + sim
         self.manual_backward(i_loss) # maximise similarity
         opt_i.step()
         # update scheduler only at the end of each epoch
