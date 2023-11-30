@@ -18,6 +18,7 @@ python main_pretrain.py \
     --encoder resnet18 \
     --mask_fbase 8 \
     --auto_mask \
+    --auto_mask_dir '/data/pwojcik/adios/auto_mask' \
     --method simclr_adios_s \
     --output_dim 128 \
     --proj_hidden_dim 2048 \
