@@ -173,7 +173,7 @@ def prepare_datasets(
             transform=T_val,
         )
 
-    elif dataset in ["imagenet", "imagenet100", "imagenet100s"]:
+    elif dataset in ["imagenet", "imagenet100", "imagenet100s", "he"]:
         train_dataset = ImageFolder(os.path.join(data_dir, train_dir), T_train)
         val_dataset = ImageFolder(os.path.join(data_dir, val_dir), T_val)
 
