@@ -73,7 +73,6 @@ class BaseModel(pl.LightningModule):
         weight_decay: float,
         classifier_lr: float,
         exclude_bias_n_norm: bool,
-        accumulate_grad_batches: int,
         extra_optimizer_args: Dict,
         scheduler: str,
         min_lr: float,
@@ -88,6 +87,7 @@ class BaseModel(pl.LightningModule):
         lr_decay_steps: Sequence = None,
         disable_knn_eval: bool = True,
         knn_k: int = 20,
+        accumulate_grad_batches = 1,
         **kwargs,
     ):
         """Base model that implements all basic operations for all self-supervised methods.
