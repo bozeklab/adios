@@ -30,7 +30,7 @@ TARGET_DATASET = {
     "imagenet": "single",
     "imagenet100": "single",
     "imagenet100s": "single",
-    "he": "multi",
+    "he": "single",
     "clevr": "multi",
 }
 
