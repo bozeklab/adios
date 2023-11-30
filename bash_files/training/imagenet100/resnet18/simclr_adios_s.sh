@@ -26,7 +26,7 @@ python main_pretrain.py \
     --wandb_dir /data/pwojcik/adios_wandb \
     --checkpoint_dir /data/pwojcik/adios/checkpoints \
     --project adios \
-    --entity pwojcik \
+    --entity piotrmwojcik \
     --name simclr_adios_s_resnet18_imagenet100 \
     --wandb True
 # note: replace --data_dir, --wandb_dir, --checkpoint_dir, --project, --entity, --name with your custom values.
