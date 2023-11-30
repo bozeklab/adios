@@ -21,7 +21,7 @@ python main_pretrain.py \
     --output_dim 128 \
     --proj_hidden_dim 2048 \
     --unet_norm gn \
-    --gpus 0 \
+    --gpus 4 \
     --data_dir /data/pwojcik/images_he_seg/ \
     --wandb_dir /data/pwojcik/adios_wandb \
     --checkpoint_dir /data/pwojcik/adios/checkpoints \
