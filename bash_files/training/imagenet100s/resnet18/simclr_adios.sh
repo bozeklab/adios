@@ -25,7 +25,6 @@ python main_pretrain.py \
     --proj_hidden_dim 2048 \
     --unet_norm "in" \
     --gpus '0, 1, 2, 3' \
-    --data_dir /datasets/yshi \
     --data_dir /data/pwojcik/images_he_seg/ \
     --wandb_dir /data/pwojcik/adios_wandb \
     --project adios \
