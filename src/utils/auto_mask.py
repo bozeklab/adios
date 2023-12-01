@@ -33,7 +33,7 @@ class AutoMASK(Callback):
 
         self.args = args
         self.logdir = logdir
-        self.frequency = 10
+        self.frequency = 5
         self.color_palette = color_palette
         self.keep_previous = keep_previous
 

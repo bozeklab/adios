@@ -23,6 +23,7 @@ python main_pretrain.py \
     --method simclr_adios \
     --output_dim 128 \
     --proj_hidden_dim 2048 \
+    --checkpoint_dir /data/pwojcik/adios/checkpoints \
     --unet_norm "in" \
     --gpus '0, 1, 2, 3' \
     --data_dir /data/pwojcik/images_he_seg/ \
