@@ -123,5 +123,5 @@ class AutoMASK(Callback):
         """
 
         epoch = trainer.current_epoch  # type: ignore
-        if epoch % self.frequency == 0 and not trainer.sanity_checking:
+        if epoch % self.frequency == 15 and not trainer.sanity_checking:
             self.plot(trainer, module)

@@ -6,7 +6,9 @@ python main_pretrain.py \
     --mask_lr 0.014515024186652984 \
     --weight_decay 0.0001 \
     --max_epochs 500 \
-    --dataset imagenet100s \
+    --dataset he \
+    --auto_mask \
+    --auto_mask_dir '/data/pwojcik/adios/auto_mask' \
     --scheduler warmup_cosine \
     --lr 0.11127702230184772 \
     --optimizer sgd \
@@ -22,12 +24,12 @@ python main_pretrain.py \
     --output_dim 128 \
     --proj_hidden_dim 2048 \
     --unet_norm "in" \
-    --gpus 0 \
+    --gpus '0, 1, 2, 3' \
     --data_dir /datasets/yshi \
-    --wandb_dir /datasets/yshi/adios \
-    --checkpoint_dir /datasets/yshi/adios/trained_models \
+    --data_dir /data/pwojcik/images_he_seg1000/ \
+    --wandb_dir /data/pwojcik/adios_wandb \
     --project adios \
-    --entity yugeten \
-    --name simclr_adios_resnet18_imagenet100s \
+    --entity piotrmwojcik \
+    --name simclr_adios_resnet18_he \
     --wandb True
 # note: replace --data_dir, --wandb_dir, --checkpoint_dir, --project, --entity, --name with your custom values.
