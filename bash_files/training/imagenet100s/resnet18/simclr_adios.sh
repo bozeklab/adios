@@ -26,7 +26,7 @@ python main_pretrain.py \
     --unet_norm "in" \
     --gpus '0, 1, 2, 3' \
     --data_dir /datasets/yshi \
-    --data_dir /data/pwojcik/images_he_seg1000/ \
+    --data_dir /data/pwojcik/images_he_seg/ \
     --wandb_dir /data/pwojcik/adios_wandb \
     --project adios \
     --entity piotrmwojcik \
