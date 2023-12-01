@@ -33,7 +33,7 @@ class AutoMASK(Callback):
 
         self.args = args
         self.logdir = logdir
-        self.frequency = frequency
+        self.frequency = 10
         self.color_palette = color_palette
         self.keep_previous = keep_previous
 
@@ -124,4 +124,5 @@ class AutoMASK(Callback):
 
         epoch = trainer.current_epoch  # type: ignore
         if epoch % self.frequency == 15 and not trainer.sanity_checking:
-            self.plot(trainer, module)
+            if trainer.is_global_zero:
+                self.plot(trainer, module)
