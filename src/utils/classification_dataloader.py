@@ -142,7 +142,6 @@ def prepare_datasets(
     if val_dir is None:
         val_dir = f"{dataset_name}/val"
 
-
     if dataset in ["cifar10", "cifar100"]:
         DatasetClass = vars(torchvision.datasets)[dataset.upper()]
         train_dataset = DatasetClass(

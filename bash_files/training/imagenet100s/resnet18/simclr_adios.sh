@@ -26,7 +26,7 @@ python main_pretrain.py \
     --checkpoint_dir /data/pwojcik/adios/checkpoints \
     --unet_norm "in" \
     --gpus '0, 1, 2, 3' \
-    --data_dir /data/pwojcik/images_he_seg/ \
+    --data_dir /data/pwojcik/TCGA_IMAGES/ \
     --wandb_dir /data/pwojcik/adios_wandb \
     --project adios \
     --entity piotrmwojcik \
