@@ -9,6 +9,7 @@ python main_pretrain.py \
     --dataset he \
     --auto_mask \
     --auto_mask_dir '/data/pwojcik/adios/auto_mask' \
+    --auto_mask_frequency 5 \
     --scheduler warmup_cosine \
     --lr 0.11127702230184772 \
     --optimizer sgd \

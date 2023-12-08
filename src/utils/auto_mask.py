@@ -12,7 +12,7 @@ class AutoMASK(Callback):
         self,
         args: Namespace,
         logdir: str,
-        frequency: int = 1,
+        frequency: int = 5,
         keep_previous: bool = False,
         color_palette: str = "hls",
     ):
@@ -123,8 +123,6 @@ class AutoMASK(Callback):
         """
 
         epoch = trainer.current_epoch  # type: ignore
-        if epoch % self.frequency == 15 and not trainer.sanity_checking:
-            print('!!!')
-            print()
+        if epoch % self.frequency == 0 and not trainer.sanity_checking:
             if trainer.is_global_zero:
                 self.plot(trainer, module)
