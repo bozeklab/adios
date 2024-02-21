@@ -26,7 +26,7 @@ python main_pretrain.py \
     --proj_hidden_dim 2048 \
     --checkpoint_dir /data/pwojcik/adios/checkpoints \
     --unet_norm "in" \
-    --gpus '0, 1, 2' \
+    --gpus '0, 1' \
     --data_dir /data/pwojcik/TCGA_IMAGES/ \
     --wandb_dir /data/pwojcik/adios_wandb \
     --project adios \
